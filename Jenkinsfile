@@ -7,7 +7,7 @@ pipeline {
     }
 */
     environment {
-        registry = "arjun001234/vproappdock"
+        registry = "arjun001234/vproappcicd"
         registryCredential = 'dockerhub'
     }
 
@@ -97,7 +97,6 @@ pipeline {
         //         }
         //     }
         // }
-
         stage('Kubernetes Deploy') {
 	  agent { label 'KOPS' }
             steps {
